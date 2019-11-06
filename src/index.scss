@@ -409,6 +409,7 @@ button {
 /* ===== NEWS FEED STYLES ===== */
 .news-post {
   margin: 40px 0;
+
   &:nth-of-type(1) {
     margin-top: 15px;
   }
@@ -437,6 +438,7 @@ button {
 .loader {
   display: flex;
   justify-content: center;
+
   .circle {
     width: 15px;
     height: 15px;
@@ -482,5 +484,4 @@ button {
   box-shadow: 0 0 10px lighten($primary-blue, 30%);
   bottom: 30px;
   left: 0;
-  z-index: -1;
 }
