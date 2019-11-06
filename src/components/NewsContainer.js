@@ -6,7 +6,7 @@ window.onscroll = function() {
 }
 
 function scroll() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
     document.querySelector('.news-container__top-btn').style.display = 'block';
   } else {
     document.querySelector('.news-container__top-btn').style.display = 'none';

@@ -58,7 +58,6 @@ class SourcesModal extends Component {
     this.setState((prevState) => {
       const selectedSourcesIds = prevState.selectedSources.map(src => src.id);
       const selectedSource = document.querySelector
-      // BUG: figure out why toggling source doesn't affect temporarySelected!
       if (!prevState.selectedSources || selectedSourcesIds.indexOf(src.id) === -1) {
 
         console.log('prevstate: ',prevState.selectedSources);

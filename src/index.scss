@@ -482,4 +482,5 @@ button {
   box-shadow: 0 0 10px lighten($primary-blue, 30%);
   bottom: 30px;
   left: 0;
+  z-index: -1;
 }
