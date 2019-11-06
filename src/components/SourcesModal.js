@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-/* TO DO
- * 1.) Abort asynchronous tasks when component unmounts...
-*/
-
 /*
   NOTES:
     - display: none does NOT unmount a component, so when I tried to setState
@@ -59,9 +55,6 @@ class SourcesModal extends Component {
       const selectedSourcesIds = prevState.selectedSources.map(src => src.id);
       const selectedSource = document.querySelector
       if (!prevState.selectedSources || selectedSourcesIds.indexOf(src.id) === -1) {
-
-        console.log('prevstate: ',prevState.selectedSources);
-
         return {
           selectedSources: prevState.selectedSources.concat(src)
         }
@@ -186,8 +179,6 @@ class SourcesModal extends Component {
   }
 
   render() {
-    console.log('SourcesModal selectedSources: ', this.state.selectedSources);
-
     const modalPlaceholder = this.returnModalPlaceholder();
 
     return (

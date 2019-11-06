@@ -57,7 +57,6 @@ class App extends Component {
     this.setState(prevState => {
       return { loading: true }
     })
-    console.log(`https://newsapi.org/v2/${this.state.newsType}?${query}${country}${sources}pageSize=100&apiKey=${this.APIkey}`)
 
     const response = await fetch (`https://newsapi.org/v2/${this.state.newsType}?${query}${country}${sources}pageSize=100&apiKey=${this.APIkey}`);
     const responseJSON = await response.json();
@@ -120,8 +119,13 @@ class App extends Component {
   }
 
   render() {
-    console.log('App component sources', this.state.selectedSources);
-    console.log('state ', this.state);
+    // Disable scrolling when the sources modal pops up
+    if (this.state.modalVisible === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     if (this.state.loading === false)
     {
       const newsList = this.state.posts.sort((articleA, articleB) => {
